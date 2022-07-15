@@ -9,20 +9,24 @@
     <link rel="stylesheet" href="./public/style.css" />
   </head>
   <body>
-    <div class="flex items-center justify-center min-h-screen bg-gray-400">
-      <div class="flex flex-col w-full max-w-xs gap-5 p-4 bg-white rounded">
-        <div class="we">
-          <input
-            type="text"
-            class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-            id="search"
-            placeholder="Search for a city"
-          />
-        </div>
+    <div
+      class="flex flex-col items-center justify-center min-h-screen gap-5 bg-white"
+    >
+      <form class="flex w-full max-w-xs change-location">
+        <input
+          type="text"
+          class="flex w-full p-4 m-0 text-base font-normal text-gray-700 transition ease-in-out bg-black border border-red-300 border-solid rounded form-control bg-clip-padding focus:text-white focus:border-red-900 focus:outline-none"
+          name="city"
+          placeholder="Give a location then press enter"
+        />
+      </form>
+      <div
+        class="flex flex-col hidden w-full max-w-xs gap-5 p-4 text-white bg-black rounded details"
+      >
         <div class="text-xl font-bold city">Sydney</div>
-        <div class="text-sm text-gray-500 date">Thursday 10 May 2020</div>
+        <div class="text-sm date">Thursday 10 May 2020</div>
         <div
-          class="inline-flex items-center self-center justify-center w-24 h-24 mt-6 text-6xl text-indigo-400 rounded-lg"
+          class="inline-flex items-center self-center justify-center w-24 h-24 mt-6 text-6xl text-indigo-400 rounded-lg icon"
         >
           <svg
             class="w-32 h-32"
@@ -47,6 +51,7 @@
         </div>
       </div>
     </div>
+    <script src="./forecast.js" async defer></script>
     <script src="./app.js" async defer></script>
   </body>
 </html>
