@@ -1,25 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Clock</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">    <link rel="stylesheet" href="./public/style.css">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Weather</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./public/style.css" />
   </head>
   <body>
-    <div class="clock
-    font-[VT323]  bg-[url('../public/bg.gif')] bg-no-repeat bg-cover">
-    <div class="flex font-extrabold text-6xl gap-10 w-[100%] h-[100vh] justify-center 
-    items-center bg-purple-400/30 backdrop-blur-[3px] text-black md:gap-10 md:text-8xl">
-      <div class="hours "></div>
-      <div class="minutes "></div>
-      <div class="seconds "></div>
+    <div class="flex items-center justify-center min-h-screen bg-gray-400">
+      <div class="flex flex-col w-full max-w-xs gap-5 p-4 bg-white rounded">
+        <div class="we">
+          <input
+            type="text"
+            class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            id="search"
+            placeholder="Search for a city"
+          />
+        </div>
+        <div class="text-xl font-bold city">Sydney</div>
+        <div class="text-sm text-gray-500 date">Thursday 10 May 2020</div>
+        <div
+          class="inline-flex items-center self-center justify-center w-24 h-24 mt-6 text-6xl text-indigo-400 rounded-lg"
+        >
+          <svg
+            class="w-32 h-32"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
+            ></path>
+          </svg>
+        </div>
+        <div class="flex flex-row items-center justify-center mt-6">
+          <div class="text-6xl font-medium temp">24°</div>
+          <div class="flex flex-col items-center ml-6">
+            <div class="weather-stat">Cloudy</div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
     <script src="./app.js" async defer></script>
   </body>
 </html>

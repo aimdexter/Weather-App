@@ -2,7 +2,7 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   content: ["./public/*"],
-  content: ["../CLOCK/*"],
+  content: ["../weather-app/*"],
   theme: {
     extend: {},
   },
