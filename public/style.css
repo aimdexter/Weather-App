@@ -669,14 +669,6 @@ video {
   background-clip: padding-box;
 }
 
-.fill-white {
-  fill: #fff;
-}
-
-.fill-red-700 {
-  fill: #b91c1c;
-}
-
 .p-4 {
   padding: 1rem;
 }
