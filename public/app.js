@@ -1,8 +1,9 @@
 const cityForm = document.querySelector('form');
 const details = document.querySelector('.details');
+const icon = document.querySelector('.icon img');
+
 
 //updatethe UI from data we get from the api
-
 const updateUi = (data) => {
 
     //Normal way savingg data.cityDets and data.weather in variable so we dont call them everytime
@@ -22,21 +23,8 @@ const updateUi = (data) => {
         <div
           class="inline-flex items-center self-center justify-center w-24 h-24 mt-6 text-6xl text-indigo-400 rounded-lg"
         >
-          <svg
-            class="w-32 h-32"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
-            ></path>
-          </svg>
-        </div>
+        <div class="icon"><img src="../src/icons/${weather.WeatherIcon}.svg" /></div>
+      </div>
         <div class="flex flex-row items-center justify-center mt-6">
           <div class="text-6xl font-medium temp">${weather.Temperature.Metric.Value}ºC</div>
           <div class="flex flex-col items-center ml-6">
@@ -45,7 +33,6 @@ const updateUi = (data) => {
         </div>
     `;
 
-    // let iconSrc = `src/icons/${weather.WeatherIcon}.svg`;
 
     // //remove the hidden classe if present data
     if (details.classList.contains('hidden')) {
@@ -61,7 +48,8 @@ cityForm.addEventListener('submit', e => {
     const city = cityForm.city.value.trim();
     cityForm.reset();    
     updateCity(city)
-    .then(data => updateUi(data),)
+    .then(data => updateUi(data))
+    // .then(data => console.log(data))
     .catch(err => console.log(err));
 
 });

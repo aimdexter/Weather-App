@@ -14,7 +14,7 @@
   </head>
   <body>
     <div
-      class="flex flex-col items-center justify-center min-h-screen gap-5 bg-white"
+      class="flex flex-col items-center justify-center min-h-screen gap-5 bg-black"
     >
       <form class="flex w-full max-w-xs change-location">
         <input
@@ -25,32 +25,19 @@
         />
       </form>
       <div
-        class="flex flex-col hidden w-full max-w-xs gap-5 p-4 text-white bg-black border border-red-300 border-solid rounded details"
+        class="flex flex-col w-full max-w-xs gap-5 p-4 text-white border border-red-300 border-solid rounded bg-slate-500 details"
       >
-        <div class="text-xl font-bold city">Sydney</div>
-        <div class="text-sm date">Thursday 10 May 2020</div>
+        <div class="text-xl font-bold city">CITY</div>
+        <div class="text-sm date">Day Month Year</div>
         <div
           class="inline-flex items-center self-center justify-center w-24 h-24 mt-6 text-6xl text-indigo-400 rounded-lg icon"
         >
-          <svg
-            class="w-32 h-32"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
-            ></path>
-          </svg>
+          <div class="icon"><img src="../src/icons/3.svg" /></div>
         </div>
         <div class="flex flex-row items-center justify-center mt-6">
-          <div class="text-6xl font-medium temp">24°</div>
+          <div class="text-6xl font-medium temp">TEMP ºC</div>
           <div class="flex flex-col items-center ml-6">
-            <div class="weather-stat">Cloudy</div>
+            <div class="weather-stat"></div>
           </div>
         </div>
       </div>
