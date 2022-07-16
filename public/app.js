@@ -23,7 +23,7 @@ const updateUi = (data) => {
         <div
           class="inline-flex items-center self-center justify-center w-24 h-24 mt-6 text-6xl text-indigo-400 rounded-lg"
         >
-        <div class="icon"><img src="../src/icons/${weather.WeatherIcon}.svg" /></div>
+        <div class="icon"><img src="./icons/${weather.WeatherIcon}.svg" /></div>
       </div>
         <div class="flex flex-row items-center justify-center mt-6">
           <div class="text-6xl font-medium temp">${weather.Temperature.Metric.Value}ºC</div>
